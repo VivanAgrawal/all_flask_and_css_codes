@@ -1,0 +1,12 @@
+from flask import Flask
+
+app = Flask(__name__)
+
+@app.route('/delete/<resource_id>', methods=['DELETE'])
+def delete_resource(resource_id):
+    if request.method == 'DELETE':
+        # Delete the resource with the provided ID
+        return f'Deleted resource with ID {resource_id}'
+
+if __name__ == '__main__':
+    app.run(debug=True)

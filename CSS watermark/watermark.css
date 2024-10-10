@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.watermarked-content {
+    position: relative;
+    padding: 20px;
+}
+
+.watermarked-content::before {
+    content: "Watermark Text"; /* Your watermark text */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    opacity: 0.5; /* Adjust the opacity as needed */
+}

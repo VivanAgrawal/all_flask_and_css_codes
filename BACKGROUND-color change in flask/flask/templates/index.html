@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Magical Color Changer</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function changeColor() {
+            $.ajax({
+                url: '/get_color',
+                success: function(data) {
+                    $('body').css('background-color', data);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+    <h1>Welcome to the Magical Color Changer!</h1>
+    <p>Click the button to change the background color:</p>
+    <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
