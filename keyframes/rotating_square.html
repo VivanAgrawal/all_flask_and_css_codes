@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*A square that rotates 360°:*/
+
+
+@keyframes rotate360 {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(360deg); }
+    100%{ transform: rotate(0deg); }
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    animation: rotate360 2s linear infinite;
+}
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circular Motion with Rotation and Color Change</title>
+    <style>
+        /* Circular Motion Animation */
+        @keyframes circularMotion {
+            0% { transform: translate(150px, 0) rotate(0deg);background-color: red; } /* Start at the right */
+            25% { transform: translate(300px, 150px) rotate(90deg);background-color: yellow; } /* Move to the bottom */
+            50% { transform: translate(150px, 300px) rotate(180deg);background-color: green; } /* Move to the left */
+            75% { transform: translate(0, 150px) rotate(270deg);background-color: blue; } /* Move to the top */
+            100% { transform: translate(150px, 0) rotate(360deg);background-color: rgb(30, 167, 167); } /* Return to the start */
+        }
+        /* Container to center the animation */
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        /* Box styling */
+        .box {
+            width: 200px; /* Size of the box */
+            height: 200px;
+            position: absolute;
+            background-color: red; /* Initial color */
+            animation: circularMotion 3s linear infinite /* Circular motion */}
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <div class="box"></div> <!-- Box instead of an image -->
+    </div>
